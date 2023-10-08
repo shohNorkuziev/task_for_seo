@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coffee</title>
+</head>
+<body>
+    <h1 class="border">
+        Coffee Break
+    </h1>
+    <nav class="border">
+        <h2 class="coffeeQty">Coffee:</h2>
+        <h2 class="milkQty">Milk:</h2>
+        <h2 class="sugarQty">Sugar:</h2>
+        <h2 class="cupQty">Cup:</h2>
+    </nav>
+    <div class="btn">
+        <button class="updateDetails">Buy drink</button>
+        <button class="Service">Service</button>
+    </div>
+    <dialog class="buyDrink">
+        <form method="dialog">
+          <section>        
+                <div class="margin"><button class="Espresso">Espresso</button></div>
+                <div class="margin"><button class="Americano">Americano</button></div>
+                <div class="margin"><button class="Latte">Latte</button></div>
+          </section>
+          <menu>
+            <button class="cancel" type="reset">Close</button>
+          </menu>
+        </form>
+    </dialog>
+    <dialog class="serviceDialog">
+        <form method="dialog">
+            <h1 class="border">Service</h1>
+            <p >coffee</p>
+            <input type="text" class="coffee">
+            <p >Milk</p>
+            <input type="text" class="milk">
+            <p >Sugar</p>
+            <input type="text" class="sugar">
+            <p >Cup</p>
+            <input type="text" class="cup">
+            <div><button class="service border">Add</button></div>
+            <p>password</p>
+            <input type="text" class="password">
+            <div>
+                <button class="money border">Take money </button>
+                <button class="close">close</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+<script src="js.js"></script>
+</html>

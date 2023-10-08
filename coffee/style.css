@@ -1,0 +1,10 @@
+.border{
+    border-bottom: 1px solid black;
+}
+.service{
+    display: grid;
+    gap: 5px;
+}
+.margin{
+    margin: 15px;
+}
