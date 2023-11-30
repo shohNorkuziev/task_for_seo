@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrapper {
+      display: flex;
+      gap: 10px;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .cart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100px;
+      gap: 15px;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    button {
+      width: 70px;
+      height: 40px;
+    }
+
+    dialog {
+      animation: fade-out 0.7s ease-out;
+    }
+
+    dialog[open] {
+      animation: fade-in 0.7s ease-out;
+    }
+
+    dialog[open]::backdrop {
+      animation: backdrop-fade-in 0.7s ease-out forwards;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+      }
+
+      100% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+      }
+    }
+
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+        transform: scaleY(1);
+        display: block;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scaleY(0);
+        display: none;
+      }
+    }
+
+    @keyframes backdrop-fade-in {
+      0% {
+        background-color: rgb(0 0 0 / 0);
+      }
+
+      100% {
+        background-color: rgb(0 0 0 / 0.25);
+      }
+    }
+
+    body,
+    button {
+      font-family: system-ui;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>МАГАЗИН</h1>
+  <div>
+    <dialog id="dialog" class="dialog">
+      <div class="basket">
+        <h1>Корзина</h1>
+        <hr>
+        <div class="content">
+        </div>
+        <hr>
+        <h1>Всего: <span class="allPrice"></span>Р</h1>
+        <hr>
+        <input type="button" value="купить">
+        <input type="button" value="очистить">
+      </div>
+      <input type="button" value="close" class="close">
+    </dialog>
+    <input type="button" value="Корзина" class="trash">
+  </div>
+  <div class="wrapper">
+
+  </div>
+</body>
+<script src="js.js"></script>
+
+</html>
