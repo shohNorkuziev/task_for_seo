@@ -59,7 +59,7 @@ function displayQuestion($question, $answers, $currentQuestion) {
     foreach ($answers as $answer) {
         echo "<label><input type='radio' name='user_answer' value='{$answer['is_correct']}'>{$answer['answer_text']}</label>";
     }
-
+    
     echo "<input type='submit' value='Ответить'>";
     echo "</form>";
 }
@@ -69,7 +69,7 @@ function calculateScore() {
     for ($i = 1; $i <= 5; $i++) {
         $userAnswer = isset($_GET["question$i"]) ? $_GET["question$i"] : null;
         if ($userAnswer !== null) {
-            $score += ($userAnswer == 1) ? 1 : 0;
+            $score += ($userAnswer === 1) ? 1 : 0;
         }
     }
     return $score;

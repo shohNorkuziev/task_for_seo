@@ -7,6 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET' || !isset($_GET['user_answer']) || !iss
 $userAnswer = $_GET['user_answer'];
 $currentQuestion = $_GET['question'];
 
-header("Location: index.php?question=" . ($currentQuestion + 1) . "&answer=$userAnswer");
+header("Location: index.php?question=" . ($currentQuestion + 1) . "&user_answer=$userAnswer");
 exit();
 ?>
